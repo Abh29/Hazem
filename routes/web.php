@@ -18,8 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    dd("test route");
-});
+    //dd("test route");
+    return view('test');
+})->name('test');
 
 Auth::routes();
 
@@ -28,4 +29,3 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
